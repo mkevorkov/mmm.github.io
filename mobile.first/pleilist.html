@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logitech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="menu" href="#mouse">Плейлист</a></li>
+                <li><a class="menu" href="#about">Фотоальбом</a></li>
+                <li><a class="menu" href="https://yandex.ru">О компании</a></li>
+            </ul>
+        </nav>
+        <div class="menu-bg" id="menu-bg"></div>
+                 <img class="logo" src="images/l9laDVUYZ6rOhyKGQZlaWvOqLtBRrxNfXoNJ6WAjU59rsFDLax-gCmFf5MY3aHKNQz66A_-pW768vLQtULabd7Zf (1).jpg">
+    </div>
+      
+    </header>
+    <main>
+
+        <div class="textblock">
+            <p class="text">
+                <div class="grid-wrapper8">
+                    <p class="lop">ПРИГЛАШАЕМ ДЕТЕЙ И ВЗРОСЛЫХ НА ГРУППОВЫЕ, А ТАК ЖЕ ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ! </p>
+                    <p class="lop">   МЛАДШАЯ ГРУППА : С 5 ДО 9 ЛЕТ.</p>
+                    <p class="lop"> СРЕДНЯЯ ГРУППА : С 9 ЛЕТ ДО 16 ЛЕТ.</p> 
+                    <p class="lop">   СТАРШАЯ ГРУППА : С 16 ЛЕТ И СТАРШЕ. </p>
+                    <p class="lop">   <STILE> ПЕРВОЕ ЗАНЯТИЕ БЕСПЛАТНО </STILE></p>
+                    <p class="lop">   ВСЕХ ЖДЕМ В GAMPR CLUB ПО АДРЕСУ УЛИЦА ПЕРЕУЛОК ГАРАЖНЫЙ,9 </p> 
+                </div>
+            </p>
+        
+        </div>
+        <article class="mousetext">
+            <p class="mxvertical"><div class="grid1">
+                <div id="yandexmap" style="width: 500px; height: 500px"></div>
+            </div>
+        </p>
+            
+            
+        </article>
+    </main>
+    <footer id="about">
+        <div class="group">
+            <a class="footerA" href="#">ПЕР.ГАРАЖНЫЙ,9</a>
+            <a class="footerA" href="#">gampr.club.com</a>
+            <a class="footerA" href="tel:+79676728552">+79676728552 Александр</a>
+            <a class="footerA" href="tel:+79890097444">+79890097444 Грант</a>
+        </div>
+        <p class="footerP">Все права защищены © 2020</p>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+        type="text/javascript"></script>
+        <script>
+var map;
+var marker;
+function initMap ()
+  {
+  map = new ymaps.Map("yandexmap", {
+    center: [45.085762, 39.018789],
+    zoom: 16
+    });
+  marker = new ymaps.Placemark([45.085762, 39.018789], {
+    hintContent: 'GAMPR',
+    balloonContent: '<img class="oko" src="images/l9laDVUYZ6rOhyKGQZlaWvOqLtBRrxNfXoNJ6WAjU59rsFDLax-gCmFf5MY3aHKNQz66A_-pW768vLQtULabd7Zf.jpg"> GAMPR '
+    });
+  map.geoObjects.add(marker);
+  }
+ymaps.ready(initMap);
+
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+        </script>
+</body>
+</html>
